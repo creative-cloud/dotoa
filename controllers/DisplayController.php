@@ -18,17 +18,9 @@ class DisplayController extends Controller
        ],
      ]);
     $users=$provider->getModels();
-    //$users=test1::find()->all();
-    //$users=mysql_query("select * from new_user")
-    //print($users);
-    //if()
-    header('Content-type: text:plain');
-    //print_r($users[0]->f_name);
-    // foreach ($users as $u) {
-    //   // code...
-    //    print_r($u->f_name);
-    // }
 
+    header('Content-type: text:plain');
+  
     return $this->render('index', ['dataProvider' => $provider, 'users'=>$users,
     ]);
   }
